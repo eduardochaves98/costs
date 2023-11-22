@@ -7,28 +7,33 @@ import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import Company from './components/pages/Company';
 import NewProject from './components/pages/NewProject';
+import Projects from './components/pages/Projects';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home />
       },
       {
         path: "/contact",
-        element: <Contact/>
+        element: <Contact />
       },
       {
         path: "/company",
-        element: <Company/>
+        element: <Company />
       },
       {
-        path:"/newproject",
-        element: <NewProject/>
+        path: "/projects",
+        element: <Projects />
+      },
+      {
+        path: "/newproject",
+        element: <NewProject />
       }
     ]
   }

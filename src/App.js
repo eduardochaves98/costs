@@ -1,20 +1,18 @@
-import { Outlet, Link} from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import NavBar from "./components/layout/NavBar";
+import Footer from "./components/layout/Footer";
 import Container from "./components/layout/Container";
+
 
 function App() {
   return (
-    <div className="App">
-      <ul className="App-header">
-          <Link to="/">Home</Link>
-          <Link to="/contact">Contato</Link>
-          <Link to="/company">Empresa</Link>
-          <Link to="/newproject">Novo Projeto</Link>
-      </ul>
+    <>
+      <NavBar />
       <Container customClass="min-height">
         <Outlet />
       </Container>
-      <p>Footer</p>
-    </div>
+      <Footer />
+    </>
   );
 }
 
