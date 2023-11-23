@@ -20,6 +20,10 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
+        path: "*",
+        element: <Home />
+      },
+      {
         path: "/contact",
         element: <Contact />
       },
@@ -35,9 +39,12 @@ const router = createBrowserRouter([
         path: "/newproject",
         element: <NewProject />
       }
-    ]
+    ],
+
   }
-]);
+],
+  { basename: "/mvno-control-panel" }
+);
 root.render(
   <React.StrictMode>
     <RouterProvider router={router}>
